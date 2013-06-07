@@ -1,0 +1,1 @@
+<div id="footer">Developed by Fabio Rocha (<a href="https://github.com/fabiorochafg">https://github.com/fabiorochafg</a> | <a href="fabiorochafg@gmail.com">fabiorochafg@gmail.com</a>)</div>

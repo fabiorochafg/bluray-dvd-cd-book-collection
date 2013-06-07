@@ -1,0 +1,27 @@
+/* CSS Document - Developed by Fabio Rocha (https://github.com/fabiorochafg | fabiorochafg@gmail.com) */
+
+* div {
+    display: inline !important;
+    overflow: visible !important;
+}    
+body {
+    background: #FFF;
+    color: #000;
+    font: 10pt serif;
+}
+a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+#boxes {
+	display: inline-block;
+    margin: 3% 1.5% 0 !important;
+    overflow: hidden;
+}
+#content {
+	display: inline-block;
+    margin: 0 0 30px !important;
+}
+.box-item ul {
+    display: none;
+}
