@@ -1,14 +1,14 @@
-<?php include "arquivos/conexao.php"; ?>
-<?php include "arquivos/inc.functions.php"; ?>
+<?php include "files/conection.php"; ?>
+<?php include "files/inc.functions.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
-<? include "arquivos/inc.head.php"; ?>
+<? include "inc.head.php"; ?>
 </head>
 
 <body>
 <div class="container">
-    <? include "arquivos/inc.top.php"; ?>
+    <? include "inc.top.php"; ?>
 	<div id="content">
 		<?php
 		if (isset($_GET['cod'])) {
@@ -26,7 +26,7 @@
 				<label for="">* Ano</label>
 				<input type="text" name="ano" value="'; if ($dados[2] != 0) { echo $dados[2]; } echo '" class="input_mini" />
 				<label for="">Imagem atual</label>
-				<img src="fotos/'.$dados[5].'" alt="'.$dados[0].'" />
+				<img src="photos/'.$dados[5].'" alt="'.$dados[0].'" />
 				<label for="imagem">Substituir imagem <span>Somente arquivos .jpg ou .gif.</span><span>A imagem será visualizada com largura de 180 pixels.</span></label>
 				<input id="imagem" name="imagem" type="file" class="nao-obrigatorio" />
 				<label for="">Especificações</label>
@@ -53,14 +53,14 @@
 					strtolower(end(explode('.', $_FILES['imagem']['name'])))=='gif')) {
 
 					$arquivo = date("Y-m-d")."_".date("His")."_".strtolower(preg_replace(array('/([`\?!^~\'"])/','/([^a-z0-9])/i','/(-+)/'),array('','-','-'),iconv('UTF-8', 'ASCII//TRANSLIT', $filme))).".".end(explode('.', $_FILES['imagem']['name']));
-					move_uploaded_file($_FILES['imagem']['tmp_name'], "fotos/".$arquivo);
-					criarThumbnail($arquivo, 180, "fotos/", "fotos/");
+					move_uploaded_file($_FILES['imagem']['tmp_name'], "photos/".$arquivo);
+					criarThumbnail($arquivo, 180, "photos/", "photos/");
 					
 					// Consulta existência de arquivo anteriormente
 					$consulta=mysql_query("SELECT imagem FROM filme WHERE id_filme = $id");
 					if ($dados=mysql_fetch_row($consulta)) {
 						// Apaga arquivo anterior
-						unlink("fotos/".$dados[0]);
+						unlink("photos/".$dados[0]);
 					}					
 				}
 				$update=mysql_query("UPDATE filme 
@@ -81,7 +81,7 @@
 				$consulta=mysql_query("SELECT imagem,tipo FROM filme WHERE id_filme = $id");
 				if ($dados=mysql_fetch_row($consulta)) {
 					// Apaga arquivo anterior
-					unlink("fotos/".$dados[0]);
+					unlink("photos/".$dados[0]);
 				}
 				$delete=mysql_query("DELETE FROM filme WHERE id_filme = $id");
 				echo '<script>
@@ -94,6 +94,6 @@
 		?>
 	</div>
 </div>
-<? include "arquivos/inc.footer.php"; ?>
+<? include "inc.footer.php"; ?>
 </body>
 </html>

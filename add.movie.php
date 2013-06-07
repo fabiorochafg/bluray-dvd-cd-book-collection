@@ -1,14 +1,14 @@
-<?php include "arquivos/conexao.php"; ?>
-<?php include "arquivos/inc.functions.php"; ?>
+<?php include "files/conection.php"; ?>
+<?php include "files/inc.functions.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
-<? include "arquivos/inc.head.php"; ?>
+<? include "inc.head.php"; ?>
 </head>
 
 <body>
 <div class="container">
-    <? include "arquivos/inc.top.php"; ?>
+    <? include "inc.top.php"; ?>
 	<div id="content">
 		<?php
 		if (isset($_GET['cod'])) {
@@ -30,8 +30,8 @@
 				strtolower(end(explode('.', $_FILES['imagem']['name'])))=='gif')) {
 
 				$arquivo = date("Y-m-d")."_".date("His")."_".strtolower(preg_replace(array('/([`\?!^~\'"])/','/([^a-z0-9])/i','/(-+)/'),array('','-','-'),iconv('UTF-8', 'ASCII//TRANSLIT', $filme))).".".end(explode('.', $_FILES['imagem']['name']));
-				move_uploaded_file($_FILES['imagem']['tmp_name'], "fotos/".$arquivo);
-				criarThumbnail($arquivo, 180, "fotos/", "fotos/");
+				move_uploaded_file($_FILES['imagem']['tmp_name'], "photos/".$arquivo);
+				criarThumbnail($arquivo, 180, "photos/", "photos/");
 
 				$consulta=mysql_query("INSERT INTO filme (titulo,diretor,ano,imagem,especificacoes,preco,tipo) values ('".$filme."','".$diretor."','".$ano."','".$arquivo."','".$especificacoes."','".$preco."', ".$tipo.")");
 				echo '<script>
@@ -76,6 +76,6 @@
 		?>
 	</div>    
 </div>
-<? include "arquivos/inc.footer.php"; ?>
+<? include "inc.footer.php"; ?>
 </body>
 </html>

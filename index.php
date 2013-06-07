@@ -1,14 +1,14 @@
-<?php include "arquivos/conexao.php"; ?>
-<?php include "arquivos/inc.functions.php"; ?>
+<?php include "files/conection.php"; ?>
+<?php include "files/inc.functions.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
-<? include "arquivos/inc.head.php"; ?>
+<? include "inc.head.php"; ?>
 </head>
 
 <body>
 <div class="container">
-    <? include "arquivos/inc.top.php"; ?>
+    <? include "inc.top.php"; ?>
     <div class="box box6">
         <?php
         $total = mysql_num_rows(mysql_query('SELECT titulo FROM filme WHERE tipo=1'));
@@ -18,7 +18,7 @@
             <ul class="list list33">';
             $consulta = mysql_query("SELECT titulo,imagem FROM filme WHERE tipo=1 ORDER BY rand() LIMIT 0,3");
             while ($dados = mysql_fetch_row($consulta)) {
-                echo '<li><img src="fotos/'.$dados[1].'" alt="'.$dados[0].'" /></li>';
+                echo '<li><img src="photos/'.$dados[1].'" alt="'.$dados[0].'" /></li>';
             }
             echo '</ul>';
         }        
@@ -37,7 +37,7 @@
             <ul class="list list33">';
             $consulta = mysql_query('SELECT titulo,imagem FROM filme WHERE tipo=0 ORDER BY rand() LIMIT 0,3');
             while ($dados = mysql_fetch_row($consulta)) {
-                echo '<li><img src="fotos/'.$dados[1].'" alt="'.$dados[0].'" /></li>';
+                echo '<li><img src="photos/'.$dados[1].'" alt="'.$dados[0].'" /></li>';
             }
             echo '</ul>';
         }
@@ -91,6 +91,6 @@
         </ul> -->
     <!-- </div>     -->
 </div>
-<? include "arquivos/inc.footer.php"; ?>
+<? include "inc.footer.php"; ?>
 </body>
 </html>

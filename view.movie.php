@@ -1,9 +1,9 @@
-<? include "arquivos/conexao.php"; ?>
+<? include "files/conection.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
-<? include "arquivos/inc.head.php"; ?>
-<script type="text/javascript" src="arquivos/jquery.masonry.min.js"></script>
+<? include "inc.head.php"; ?>
+<script type="text/javascript" src="files/jquery.masonry.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#boxes').masonry({
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 <body>
 <div class="container">
-    <? include "arquivos/inc.top.php"; ?>
+    <? include "inc.top.php"; ?>
 	<?php
 	// Visualizar itens
 	$tipo = $_GET['tipo'];
@@ -44,7 +44,7 @@ $(document).ready(function(){
 			<h3>".$dados[0]."</h3>
 			<h4>".$dados[2]."</h4>
 			<div>
-				<img src='fotos/".$dados[5]."' alt='".$dados[0]."' />
+				<img src='photos/".$dados[5]."' alt='".$dados[0]."' />
 				<dl class='oculto'>";
 				if ($dados[1] != "") {
 					echo "<dt>Diretor:</dt>
@@ -69,6 +69,6 @@ $(document).ready(function(){
 	echo '</div>';
 	?>    
 </div>
-<? include "arquivos/inc.footer.php"; ?>
+<? include "inc.footer.php"; ?>
 </body>
 </html>
