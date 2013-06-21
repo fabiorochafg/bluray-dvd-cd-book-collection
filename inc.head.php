@@ -5,3 +5,5 @@
 <link rel="stylesheet" href="files/print.css" type="text/css" media="print" />
 <script src="files/jquery.js" type="text/javascript"></script>
 <script src="files/main.js" type="text/javascript"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css' />
