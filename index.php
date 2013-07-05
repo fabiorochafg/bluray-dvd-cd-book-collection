@@ -45,7 +45,7 @@
         <ul class="action action50">
             <li><a href="add.movie.php?tipo=0">Novo</a></li>
             <li><a href="view.movie.php?tipo=0">Lista</a></li>
-            <!-- <li><a href="listas/lista_dvds.php">Lista Simples</a></li> -->
+            <li><a href="listas/lista_dvds.php">Lista Simples</a></li>
             <!-- <li><a href="relatorios/dvds1.php">Relatórios</a></li> -->
         </ul>
     </div>
