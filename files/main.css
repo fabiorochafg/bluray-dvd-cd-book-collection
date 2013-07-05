@@ -1,4 +1,4 @@
-/* CSS Document - Developed by Fabio Rocha (https://github.com/fabiorochafg | fabiorochafg@gmail.com) */
+/* CSS Document - Developed by Fabio Rocha (https://fabiorochafg.github.io | fabiorochafg@gmail.com) */
 
 * {
 	border: 0 none;
@@ -18,7 +18,7 @@ body {
 	background: #000;
 	color: #333;
 	font-family: 'Poiret One', cursive;
-	font-size: 80%;
+	font-size: 85%;
 }
 dd {
 	font-size: 95%;
@@ -32,11 +32,6 @@ dt {
 	margin: 0 4px 0 0;
 }
 form {
-	background: #fff;
-	border-radius: 2px;
-	box-shadow: 1px 1px 3px #aaa;
-	margin: 2% auto;
-	overflow: auto;
 	padding: 2%;
 	width: 96%;
 }
@@ -66,42 +61,48 @@ h3 {
 }
 label {
 	clear: left;
-	color: #666;
+	color: #333333;
 	float: left;
 	font-weight: bold;
 	padding: 5px 0 0;
 	text-align: right;
-	width: 35%;
+	width: 30%;
 }
 label span {
 	clear: both;
-	color: #999;
-	display: block;
-	font-size: 90%;
+	color: #444444;
+    display: block;
+    font-size: 95%;
 	font-weight: normal;	
+}
+input[type="file"] {
+	font-size: 90%;
 }
 input[type="file"],
 input[type="text"] {
-	border: 1px solid #ccc;
+	background: #ffffff;
+	border: 1px solid #cccccc;
 	float: left;
 	height: 26px;
     margin: 0 0 10px 1%;
 	width: 320px;
 }
+input[type="file"]:focus,
+input[type="text"]:focus {
+	border: 1px solid #111111;
+}
 input[type="submit"] {
-	background: #FFCB00;
+	background: #000000;
     clear: both;
-    color: #000;
+    color: #eeeeee;
     cursor: pointer;
     display: block;
     font-weight: bold;
-    margin: 10px 0 0 36%;
-    padding: 3px 5px;
+    margin: 10px 0 0 31%;
+    padding: 5px 5px;
 }
 input[type="submit"]:hover {
-	background: #000;
-	color: #eee;
-	text-shadow: 1px 1px 1px #222;
+	background: #444444;
 }
 li {
 	line-height: 1.5em;
@@ -128,6 +129,7 @@ ul {
 #footer {
 	background: #000;
 	color: #FFF;
+	font-size: 105%;
 	margin: 0 auto;
 	padding: 5%;
     width: 90%;
@@ -229,9 +231,8 @@ ul {
 	width: 180px;
 }
 .box-item div {
-	background: #fff;
-	border-radius: 3px;
-	box-shadow: 1px 1px 3px #888;
+	background: #eeeeee;
+	box-shadow: 0px 0px 3px #777777;
 	display: inline-block;
     width: 100%;
 }
@@ -255,15 +256,15 @@ ul {
 	width: 180px;
 }
 .box-item li {
-	background: #fff;
+	background: #eeeeee;
 	float: left;
 	list-style: none;
 	text-align: center;
 	width: 50%;
 }
 .box-item li a {
-	color: #000;
-    font-size: 85%;
+	color: #000000;
+    font-size: 90%;
     font-weight: bold;
     text-transform: lowercase;
 }
@@ -272,7 +273,9 @@ ul {
 	text-decoration: none;
 }
 .box-item ul {
+    display: inline-block;
     padding: 0;
+    width: 100%;
 }
 .container {
 	background: #FFCB00;
@@ -312,8 +315,8 @@ ul {
 	text-shadow: 1px 1px 1px #000;
 }
 .list li img {
-	border-radius: 3px;
-    box-shadow: 0px 0px 1px #666;
+	border-radius: 2px;
+    box-shadow: 0px 0px 1px #777777;
     max-height: 221px;
 	width: 100%;
 }
@@ -323,7 +326,7 @@ ul {
 .msg {
 	font-size: 120%;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 30px 0 15px;
 }
 .msg.error {
     color: #db0912;
@@ -332,7 +335,6 @@ ul {
     color: #005f00;
 }
 .msg-obrigatorio {
-	color: #E8BD44;
 	margin: 0 0 15px;
     text-align: right;
 }

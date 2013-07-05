@@ -49,47 +49,47 @@
             <!-- <li><a href="relatorios/dvds1.php">Relatórios</a></li> -->
         </ul>
     </div>
-    <!-- <div class="box box6"> -->
+    <div class="box box6">
         <?php
-        // $total = mysql_num_rows(mysql_query('SELECT album FROM cd'));
-        // echo '<h3>CDs</h3>';
-        // if ($total > 0) {
-        //     echo '<h4>'.$total.'</h4>
-        //     <dl>';
-        //     $consulta = mysql_query('SELECT album FROM cd ORDER BY id_cd DESC LIMIT 0,14');
-        //     while ($dados = mysql_fetch_row($consulta)) {
-        //         echo '<dd>'.$dados[0].'</dd>';
-        //     }
-        //     echo '<dd>(...)</dd>
-        //     </dl>';
-        // }
+        $total = mysql_num_rows(mysql_query('SELECT album FROM cd'));
+        echo '<h3>CDs</h3>';
+        if ($total > 0) {
+            echo '<h4>'.$total.'</h4>
+            <dl>';
+            $consulta = mysql_query('SELECT album FROM cd ORDER BY id_cd DESC LIMIT 0,14');
+            while ($dados = mysql_fetch_row($consulta)) {
+                echo '<dd>'.$dados[0].'</dd>';
+            }
+            echo '<dd>(...)</dd>
+            </dl>';
+        }
         ?>
-        <!-- <ul class="action action50">
+        <ul class="action action50">
             <li><a href="cadastros/cad_cds.php">Novo</a></li>
             <li><a href="alteracoes/alt_cds1.php">Lista</a></li>
-        </ul> -->
-    <!-- </div> -->
-    <!-- <div class="box box6"> -->
+        </ul>
+    </div>
+    <div class="box box6">
         <?php
-        // $total = mysql_num_rows(mysql_query('SELECT titulo FROM livro'));
-        // echo '<h3>Livros</h3>';
-        // if ($total > 0) {
-        //     echo '<h4>'.$total.'</h4>
-        //     <dl>';
-        //     $consulta = mysql_query('SELECT titulo FROM livro ORDER BY id_livro DESC LIMIT 0,10');
-        //     while ($dados = mysql_fetch_row($consulta)) {
-        //         echo '<dd>'.$dados[0].'</dd>';
-        //     }
-        //     echo '<dd>(...)</dd>
-        //     </dl>';
-        // }
+        $total = mysql_num_rows(mysql_query('SELECT titulo FROM livro'));
+        echo '<h3>Livros</h3>';
+        if ($total > 0) {
+            echo '<h4>'.$total.'</h4>
+            <dl>';
+            $consulta = mysql_query('SELECT titulo FROM livro ORDER BY id_livro DESC LIMIT 0,10');
+            while ($dados = mysql_fetch_row($consulta)) {
+                echo '<dd>'.$dados[0].'</dd>';
+            }
+            echo '<dd>(...)</dd>
+            </dl>';
+        }
         ?>
-        <!-- <ul class="action action33">
+        <ul class="action action33">
             <li><a href="cadastros/cad_livros.php">Novo</a></li>
             <li><a href="alteracoes/alt_livros1.php">Lista</a></li>
             <li><a href="listas/lista_livros1.php">Relatórios</a></li>
-        </ul> -->
-    <!-- </div>     -->
+        </ul>
+    </div>    
 </div>
 <? include "inc.footer.php"; ?>
 </body>
