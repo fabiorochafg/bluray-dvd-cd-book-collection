@@ -33,7 +33,7 @@
 				move_uploaded_file($_FILES['imagem']['tmp_name'], "photos/".$arquivo);
 				criarThumbnail($arquivo, 180, "photos/", "photos/");
 
-				$consulta=mysql_query("INSERT INTO filme (titulo,diretor,ano,imagem,especificacoes,preco,tipo) values ('".$filme."','".$diretor."','".$ano."','".$arquivo."','".$especificacoes."','".$preco."', ".$tipo.")");
+				$consulta=mysql_query("INSERT INTO filme (titulo,diretor,ano,imagem,especificacoes,preco,tipo,data) values ('".$filme."','".$diretor."','".$ano."','".$arquivo."','".$especificacoes."','".$preco."', ".$tipo.",now())");
 				echo '<script>
 				document.location="add.movie.php?msg=1&tipo='.$tipo.'";
 				</script>';
@@ -56,18 +56,18 @@
 			?>			
 			<form method="post" action="add.movie.php?cod=1" enctype="multipart/form-data">
 			<p class="msg-obrigatorio">Os campos obrigatórios estão marcados com asterisco.</p>
-			<label for="Filme">* Filme</label>
-			<input type="text" id="Filme" name="filme" />
-			<label for="">* Diretor</label>
-			<input type="text" name="diretor" />
-			<label for="">* Ano</label>
-			<input type="text" name="ano" class="input_mini" />
+			<label for="filme">* Filme</label>
+			<input type="text" id="filme" name="filme" />
+			<label for="diretor">* Diretor</label>
+			<input type="text" id="diretor" name="diretor" />
+			<label for="ano">* Ano</label>
+			<input type="text" id="ano" name="ano" class="input_mini" />
 			<label for="imagem">* Imagem <span>(Somente arquivos .jpg ou .gif. A imagem será visualizada com largura de 180 pixels.)</span></label>
 			<input id="imagem" name="imagem" type="file" />
-			<label for="">Especificações</label>
-			<input type="text" name="especificacoes" class="nao-obrigatorio" />
-			<label for="">Preço (R$)</label>
-			<input type="text" name="preco" class="input_mini nao-obrigatorio" />
+			<label for="especificacoes">Especificações</label>
+			<input type="text" id="especificacoes" name="especificacoes" class="nao-obrigatorio" />
+			<label for="preco">Preço (R$)</label>
+			<input type="text" id="preco" name="preco" class="input_mini nao-obrigatorio" />
 			<input type="hidden" name="tipo" value="<?php echo $_GET['tipo']; ?>" />
 			<input type="submit" value="Adicionar" />
 			</form>

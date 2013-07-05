@@ -61,11 +61,15 @@
 					if ($dados=mysql_fetch_row($consulta)) {
 						// Apaga arquivo anterior
 						unlink("photos/".$dados[0]);
-					}					
-				}
-				$update=mysql_query("UPDATE filme 
-					SET titulo='".$filme."',diretor='".$diretor."',ano=".$ano.",especificacoes='".$especificacoes."',preco='".$preco."',imagem='".$arquivo."'
-					WHERE cod_dvd = $id");
+					}
+					$update=mysql_query("UPDATE filme 
+						SET titulo='".$filme."',diretor='".$diretor."',ano=".$ano.",especificacoes='".$especificacoes."',preco='".$preco."',imagem='".$arquivo."',data=now()
+						WHERE id_filme = $id");
+				} else {
+					$update=mysql_query("UPDATE filme 
+						SET titulo='".$filme."',diretor='".$diretor."',ano=".$ano.",especificacoes='".$especificacoes."',preco='".$preco."',data=now()
+						WHERE id_filme = $id");
+				}				
 				if ($update) {
 					echo '<script>
 					document.location="view.movie.php?msg=1&tipo='.$tipo.'";
