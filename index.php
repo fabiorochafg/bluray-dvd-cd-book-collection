@@ -55,13 +55,12 @@
         echo '<h3>CDs</h3>';
         if ($total > 0) {
             echo '<h4>'.$total.'</h4>
-            <dl>';
-                $consulta = mysql_query('SELECT album FROM cd ORDER BY id_cd DESC LIMIT 0,14');
+            <ul class="list list16">';
+                $consulta = mysql_query('SELECT album,imagem FROM cd WHERE imagem !="" ORDER BY rand() LIMIT 0,6');
                 while ($dados = mysql_fetch_row($consulta)) {
-                    echo '<dd>'.$dados[0].'</dd>';
+                    echo '<li><img src="photos/'.$dados[1].'" alt="'.$dados[0].'" /></li>';
                 }
-                echo '<dd>(...)</dd>
-            </dl>';
+            echo '</ul>';
         }
         ?>
         <ul class="action action50">
