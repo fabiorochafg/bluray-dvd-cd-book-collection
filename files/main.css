@@ -391,3 +391,34 @@ ul {
 .oculto {
 	display: none;
 }
+
+/* Media-queries */
+@media print {  
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    body {
+        color: #000000;
+        font: 9pt serif;
+    }
+    a:link, a:visited {
+        color: #333333;
+        text-decoration: none;
+    }
+    h1,
+    #footer,
+    #menu {
+        display: none !important;
+    }
+    h2 {
+    	padding: 0 0 20px !important;
+    }
+    table {
+    	border-spacing: 0;
+        font: 8pt serif;
+    }
+    td {
+    	border: 1px solid #333333;
+    }
+}
