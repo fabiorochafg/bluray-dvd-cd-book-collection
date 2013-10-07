@@ -1,5 +1,5 @@
 <? include "files/conection.php"; ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
 <? include "inc.head.php"; ?>
@@ -41,30 +41,16 @@ $(document).ready(function(){
 	<div id="boxes">';
 		while ($dados = mysql_fetch_row($consulta)) {
 			echo "<div class='box-item'>
-			<h3>".$dados[0]."</h3>
-			<h4>".$dados[2]."</h4>
-			<div>
-				<img src='photos/".$dados[5]."' alt='".$dados[0]."' />
-				<dl class='oculto'>";
-				if ($dados[1] != "") {
-					echo "<dt>Diretor:</dt>
-					<dd>".$dados[1]."</dd>";				
-				}
-				if ($dados[3] != "") {
-					echo "<dt>Especificações:</dt>
-					<dd>".$dados[3]."</dd>";				
-				}
-				if ($dados[4] != "") {
-					echo "<dt>Preço:</dt>
-					<dd>R$ ".$dados[4]."</dd>";				
-				}			
-				echo '</dl>
-				<ul>
-					<li><a href="edit.movie.php?cod=1&id='.$dados[6].'">Editar</a></li>
-					<li><a href="edit.movie.php?cod=3&id='.$dados[6].'" class="danger">Excluir</a></li>
-				</ul>
+				<h3>".$dados[0]."</h3>
+				<h4>".$dados[2]."</h4>
+				<div>
+					<img src='photos/".$dados[5]."' alt='".$dados[0]."' />
+					<ul>
+						<li><a href='edit.movie.php?cod=1&id='".$dados[6]."'>Editar</a></li>
+						<li><a href='edit.movie.php?cod=3&id='".$dados[6]."' class='danger'>Excluir</a></li>
+					</ul>
 				</div>
-			</div>';
+			</div>";
 		}
 	echo '</div>';
 	?>    

@@ -2,16 +2,6 @@
 
 $(document).ready(function(){
 
-    // view.movie
-    $(".box-item img").click(function(){
-        $(this).toggle("slow");
-        $(this).next("dl").toggle("slow");
-    });
-    $(".box-item dl").click(function(){
-        $(this).toggle("slow");
-        $(this).prev("img").toggle("slow");
-    });
-
     // Botão de exclusão
     $(".danger").click(function() {
         return confirm($(this).attr("confirm") || "Tem certeza que deseja continuar?");
