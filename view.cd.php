@@ -1,6 +1,6 @@
 <? include "files/conection.php"; ?>
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<html lang="pt-BR" dir="ltr">
 <head>
 <? include "inc.head.php"; ?>
 <script type="text/javascript" src="files/jquery.masonry.min.js"></script>
@@ -56,6 +56,7 @@ $(document).ready(function(){
 	echo '</div>';
 	?>    
 </div>
+<? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>
 </html>

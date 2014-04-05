@@ -1,7 +1,7 @@
 <?php include "files/conection.php"; ?>
 <?php include "files/inc.functions.php"; ?>
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<html lang="pt-BR" dir="ltr">
 <head>
 <? include "inc.head.php"; ?>
 </head>
@@ -98,6 +98,7 @@
 		?>
 	</div>
 </div>
+<? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>
 </html>
