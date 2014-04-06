@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<div class="container">
+<section>
     <? include "inc.top.php"; ?>
 	<?php
 	echo '<div id="content">';
@@ -44,7 +44,7 @@
 	</table>
 	</div>';
 	?>
-</div>
+</section>
 <? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>

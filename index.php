@@ -8,7 +8,7 @@
 
 <body>
 <? include "inc.nav.php"; ?>
-<div class="container">
+<section>
     <? include "inc.top.php"; ?>
     <div class="box box6">
         <?php
@@ -90,7 +90,7 @@
             <li><a href="listas/lista_livros1.php">Relatórios</a></li>
         </ul>
     </div>     -->
-</div>
+</section>
 <? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>

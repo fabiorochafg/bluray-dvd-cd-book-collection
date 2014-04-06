@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div class="container">
+<section>
     <? include "inc.top.php"; ?>
 	<div id="content">
 		<?php
@@ -97,7 +97,7 @@
 		}
 		?>
 	</div>
-</div>
+</section>
 <? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>

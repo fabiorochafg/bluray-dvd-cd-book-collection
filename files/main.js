@@ -7,6 +7,12 @@ $(document).ready(function(){
         return confirm($(this).attr("confirm") || "Tem certeza que deseja continuar?");
     });
 
+    // Topo da página
+    $("#top-of-the-page").click(function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+    });
+
     // Validação de formulários
     $("form").bind("submit",function() {
         var canSubmit = true;

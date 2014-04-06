@@ -15,13 +15,13 @@ $(document).ready(function(){
 </head>
 
 <body>
-<div class="container">
+<section>
     <? include "inc.top.php"; ?>
 	<?php
 	// Visualizar itens
 	$consulta = mysql_query('SELECT album,artista,ano,especificacoes,imagem,id_cd
 		FROM cd
-		ORDER BY ano');
+		ORDER BY ano DESC');
 	$n = mysql_num_rows($consulta);
 	echo '<div id="content">
 	<h2>Lista de CDs ('.$n.' itens)</h2>';	
@@ -55,7 +55,7 @@ $(document).ready(function(){
 		}
 	echo '</div>';
 	?>    
-</div>
+</section>
 <? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>

@@ -6,19 +6,27 @@
 	outline: 0;
 	padding: 0;
 }
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 a {
-	color: #333;
+	color: #333333;
 	text-decoration: none;
 }
 a:hover {
-	color: #999;
+	color: #999999;
 	text-decoration: underline;
 }
 body {
-	background: #000;
-	color: #333;
-	font-family: 'Poiret One', cursive;
+	background: #000000;
+	color: #333333;
+	font-family: 'Lato', sans-serif;
 	font-size: 85%;
+	font-weight: 300;
 }
 dd {
 	font-size: 95%;
@@ -28,7 +36,7 @@ dt {
 	clear: left;
 	float: left;
 	font-size: 95%;
-	font-weight: bold;
+	font-weight: 400;
 	margin: 0 4px 0 0;
 }
 footer {
@@ -37,14 +45,16 @@ footer {
 	font-size: 105%;
 	margin: 0 auto;
 	padding: 5%;
-    width: 90%;
+    width: 100%;
 }
 footer a {
 	color: #FFCB00;
 }
+footer > a {
+	float: right;
+}
 footer p {
-	display: inline-block;
-	width: 100%;
+	float: left;
 }
 form {
 	padding: 2%;
@@ -56,12 +66,12 @@ form img {
     margin: 0 0 10px 1%;
 }
 h1 {
-	padding: 15px 0;
+	padding: 15px 0 5px;
 }
 h1 a {
 	color: #000000;
 	font-size: 170%;
-	font-weight: bold;
+	font-weight: 300;
 }
 h1 a:hover {
 	color: #444444;
@@ -70,15 +80,17 @@ h1 a:hover {
 h2 {
 	color: #444;
 	font-size: 130%;
+	font-weight: 300;
 }
 h3 {
 	font-size: 115%;
+	font-weight: 300;
 }
 label {
 	clear: left;
 	color: #333333;
 	float: left;
-	font-weight: bold;
+	font-weight: 700;
 	padding: 5px 0 0;
 	text-align: right;
 	width: 30%;
@@ -88,7 +100,7 @@ label span {
 	color: #444444;
     display: block;
     font-size: 95%;
-	font-weight: normal;	
+	font-weight: 300;	
 }
 input[type="file"] {
 	font-size: 90%;
@@ -112,7 +124,7 @@ input[type="submit"] {
     color: #eeeeee;
     cursor: pointer;
     display: block;
-    font-weight: bold;
+    font-weight: 700;
     margin: 10px 0 0 31%;
     padding: 5px 5px;
 }
@@ -150,6 +162,14 @@ nav li li a {
 nav li ul {
 	padding: 0;
 }
+section {
+	border-top: 4px solid #000000;
+	background: #FFCB00;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 2% 4%;
+	width: 100%;
+}
 select {
 	background: #fff;
 	border: 1px solid #ccc;
@@ -177,15 +197,8 @@ ul {
 	padding: 10px 0 0 15px;
 }
 #boxes {
-	margin: 1.5% 1.5% 0;
-	width: 97%;
-}
-#content {
-	padding: 0 2%;
-	width: 96%;
-}
-#top {
-	padding: 0 2%;
+	margin: 2% -2%;
+	width: 100%;
 }
 .action {
 	background: #333;
@@ -274,7 +287,7 @@ ul {
 .box-item {
 	border-radius: 2px;
 	float: left;
-	margin: 1.5%;
+	margin: 2%;
 	width: 180px;
 }
 .box-item div {
@@ -288,19 +301,23 @@ ul {
 	padding: 5%;
 }
 .box-item h3 {
-	color: #333;
-	font-size: 95%;
+	color: #333333;
+	font-size: 115%;
+	font-weight: 400;
+	line-height: 1em;
+    padding: 0 10px;
 	text-align: center;
 }
 .box-item h4 {
-	color: #666;
-	font-size: 85%;
-	padding: 0 0 3px;
+	color: #666666;
+	font-size: 95%;
+    font-weight: 400;
+	padding: 3px 0 5px;
 	text-align: center;
 }
 .box-item h5 {
-	color: #999;
-	font-size: 65%;
+	color: #999999;
+	font-size: 75%;
 	margin: -1px 0 6px;
 	text-align: center;
 }
@@ -317,25 +334,17 @@ ul {
 .box-item li a {
 	color: #000000;
     font-size: 90%;
-    font-weight: bold;
+    font-weight: 400;
     text-transform: lowercase;
 }
 .box-item li:hover a {
-	color: #666;
+	color: #666666;
 	text-decoration: none;
 }
 .box-item ul {
     display: inline-block;
     padding: 0;
     width: 100%;
-}
-.container {
-	border-top: 4px solid #000000;
-	background: #FFCB00;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 2% 3%;
-	width: 94%;
 }
 .input_mini {
 	width: 100px !important;
@@ -345,8 +354,8 @@ ul {
 	border-radius: 0px 0px 2px 2px;
 	box-shadow: 1px 1px 3px #666;
 	float: right;
-	padding: 1% !important;
-    width: 98%;
+	padding: 1%;
+    width: 100%;
 }
 .list li {
 	float: left;
@@ -384,7 +393,7 @@ ul {
 }
 .msg {
 	font-size: 120%;
-    font-weight: bold;
+    font-weight: 400;
     padding: 30px 0 15px;
 }
 .msg.error {

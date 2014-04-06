@@ -15,7 +15,7 @@ $(document).ready(function(){
 </head>
 
 <body>
-<div class="container">
+<section>
     <? include "inc.top.php"; ?>
 	<?php
 	// Visualizar itens
@@ -27,7 +27,7 @@ $(document).ready(function(){
 	$consulta = mysql_query('SELECT titulo,diretor,ano,especificacoes,preco,imagem,id_filme
 		FROM filme
 		WHERE tipo='.$tipo.'
-		ORDER BY ano');
+		ORDER BY ano DESC');
 	$n = mysql_num_rows($consulta);
 	echo '<div id="content">
 	<h2>Lista de '.$filme.'s ('.$n.' itens)</h2>';	
@@ -54,7 +54,7 @@ $(document).ready(function(){
 		}
 	echo '</div>';
 	?>    
-</div>
+</section>
 <? include "inc.nav.php"; ?>
 <? include "inc.footer.php"; ?>
 </body>
