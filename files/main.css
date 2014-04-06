@@ -334,7 +334,7 @@ ul {
 	text-align: center;
 }
 .box-item img {
-	opacity: 0.7;
+	opacity: 0.9;
 	width: 180px;
 }
 .box-item img:hover {
@@ -431,14 +431,20 @@ ul {
 	width: 100%;
 }
 .tabs a {
-	background: #333333;
+	background: #000000;
 	border-radius: 2px;
 	color: #ffffff;
+	display: block;
 	padding: 5px;
 }
 .tabs a:hover {
-	background: #000000;
+	background: #333333;
 	text-decoration: none;
+}
+.tabs a.active {
+	background: #FFCB00;
+    color: #000000;
+    font-weight: 700;
 }
 .tabs li {	
 	float: left;

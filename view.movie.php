@@ -3,13 +3,45 @@
 <html lang="pt-BR" dir="ltr">
 <head>
 <? include "inc.head.php"; ?>
-<script type="text/javascript" src="files/jquery.masonry.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#boxes').masonry({
+<script src="files/jquery.masonry.min.js"></script>
+<script>
+$(function() {
+	var $container = $('#boxes');
+	// var msnry = $container.data('masonry');
+	$container.masonry({
 		itemSelector: '.box-item',
 		isReasizable: true
 	});
+    $(".tabs a").click(function() {
+    	var ano = $(this).attr("data-year");
+    	$(".tabs a").removeClass("active");
+    	$(this).addClass("active");
+    	if (ano == "Todos") {
+    		$('.box-item').show();
+    	} else {
+	        $('.box-item').each(function() {
+	            if ($(this).attr("data-year") == ano) {
+	                $(this).show();
+	            } else {
+	            	$(this).hide();
+	            }
+	        });
+	        $container.masonry({
+		itemSelector: '.box-item',
+		isReasizable: true
+	});   		
+    	}
+        // msnry.reloadItems();
+        // $container.masonry('reloadItems');
+        // $container.masonry('reveal', itemsAll);
+        // msnry.hide(itemsOff);
+        // $container.masonry('hide', itemsOff);
+  		// $('#boxes').masonry({
+		// itemSelector: '.box-item',
+		// 	isReasizable: true
+		// });
+        return false;
+    });
 });
 </script>
 </head>
@@ -37,12 +69,13 @@ $(document).ready(function(){
 			case 2: echo "<p class='msg error'>Não foi possível atualizar este filme.</p>"; break;
 		}
 	}
-	$consultaAno = mysql_query('SELECT ano FROM filme WHERE tipo='.$tipo.' GROUP BY ano ORDER BY ano');
+	$consultaAno = mysql_query('SELECT ano FROM filme WHERE tipo='.$tipo.' GROUP BY ano ORDER BY ano DESC');
 	echo '<ul class="tabs">';
 	while ($dadosAno = mysql_fetch_row($consultaAno)) {
 		echo '<li><a href="#" data-year="'.$dadosAno[0].'">'.$dadosAno[0].'</a></li>';
 	}
-	echo '</ul>
+	echo '<li><a href="#" data-year="Todos" class="active">Todos</a></li>
+	</ul>
 	</div>
 	<div id="boxes">';
 		while ($dados = mysql_fetch_row($consulta)) {

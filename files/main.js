@@ -1,6 +1,6 @@
 /* JS Document - Developed by Fabio Rocha (https://github.com/fabiorochafg | fabiorochafg@gmail.com) */
 
-$(document).ready(function(){
+$(function() {
 
     // Botão de exclusão
     $(".danger").click(function() {
@@ -10,22 +10,6 @@ $(document).ready(function(){
     // Topo da página
     $("#top-of-the-page").click(function(){
         $('html, body').animate({scrollTop:0}, 'slow');
-        return false;
-    });
-
-    // Abas
-    $(".tabs a").click(function(){
-        var ano = $(this).attr("data-year");
-        $('.box-item').hide("slow");
-        $('.box-item').each(function() {
-            if ($(this).attr("data-year") == ano) {
-                $(this).show("slow");
-            }
-        });        
-        $('#boxes').masonry({
-            itemSelector: '.box-item',
-            isReasizable: true
-        });
         return false;
     });
 
