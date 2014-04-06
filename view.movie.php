@@ -37,10 +37,16 @@ $(document).ready(function(){
 			case 2: echo "<p class='msg error'>Não foi possível atualizar este filme.</p>"; break;
 		}
 	}
-	echo '</div>
+	$consultaAno = mysql_query('SELECT ano FROM filme WHERE tipo='.$tipo.' GROUP BY ano ORDER BY ano');
+	echo '<ul class="tabs">';
+	while ($dadosAno = mysql_fetch_row($consultaAno)) {
+		echo '<li><a href="#" data-year="'.$dadosAno[0].'">'.$dadosAno[0].'</a></li>';
+	}
+	echo '</ul>
+	</div>
 	<div id="boxes">';
 		while ($dados = mysql_fetch_row($consulta)) {
-			echo "<div class='box-item'>
+			echo "<div class='box-item' data-year='".$dados[2]."'>
 				<h3>".$dados[0]."</h3>
 				<h4>".$dados[2]."</h4>
 				<div>

@@ -13,6 +13,22 @@ $(document).ready(function(){
         return false;
     });
 
+    // Abas
+    $(".tabs a").click(function(){
+        var ano = $(this).attr("data-year");
+        $('.box-item').hide("slow");
+        $('.box-item').each(function() {
+            if ($(this).attr("data-year") == ano) {
+                $(this).show("slow");
+            }
+        });        
+        $('#boxes').masonry({
+            itemSelector: '.box-item',
+            isReasizable: true
+        });
+        return false;
+    });
+
     // Validação de formulários
     $("form").bind("submit",function() {
         var canSubmit = true;
