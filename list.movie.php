@@ -32,7 +32,7 @@
 			while ($dados = mysql_fetch_row($consulta)) {
 				echo "<tr>
 					<td>".$x."</td>
-					<td>".$dados[0]."</td>
+					<td class='negrito'>".$dados[0]."</td>
 					<td>".$dados[1]."</td>
 					<td>".$dados[2]."</td>
 					<td>".$dados[3]."</td>

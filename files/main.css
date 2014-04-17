@@ -108,9 +108,9 @@ input[type="file"] {
 input[type="file"],
 input[type="text"] {
 	background: #ffffff;
-	border: 1px solid #cccccc;
+	border: 1px solid #ffffff;
 	float: left;
-	height: 26px;
+	height: 30px;
     margin: 0 0 10px 1%;
 	width: 320px;
 }
@@ -285,6 +285,9 @@ ul {
 .box6 {
 	width: 46%;
 }
+.box12 {
+	width: 96%;
+}
 .box-item {
 	border-radius: 2px;
 	display: inline-block;
@@ -425,6 +428,9 @@ ul {
 .msg-obrigatorio {
 	margin: 0 0 15px;
     text-align: right;
+}
+.negrito {
+	font-weight: 400;
 }
 .oculto {
 	display: none;
