@@ -197,8 +197,9 @@ ul {
 	padding: 10px 0 0 15px;
 }
 #boxes {
-	margin: 2% -2%;
+	margin: 20px -20px;
 	width: 100%;
+	width: calc(100% + 40px);
 }
 .action {
 	background: #333;
@@ -286,8 +287,11 @@ ul {
 }
 .box-item {
 	border-radius: 2px;
+	display: inline-block;
 	float: left;
-	margin: 2%;
+	height: auto;
+	margin: 20px;
+	min-height: 180px;
 	width: 180px;
 }
 .box-item div {
